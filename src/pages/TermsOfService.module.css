@@ -1,0 +1,576 @@
+.mainContainer {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.heroSection {
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #000000 100%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.heroTitle span {
+  background: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.heroTitle span::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 3px;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #e0e0e0;
+  margin: 0 auto 12px;
+  line-height: 1.6;
+  font-weight: 500;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+.heroDescription {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: #b0b0b0;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.8;
+  max-width: 600px;
+}
+
+/* Content Wrapper */
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+  background-color: #000000;
+}
+
+.highlightsSection {
+  background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionSubtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #e0e0e0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* Highlights Grid */
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.highlightCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 32px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+}
+
+.highlightCard:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 107, 107, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.highlightIcon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  filter: grayscale(0.3);
+  transition: filter 0.3s ease;
+}
+
+.highlightCard:hover .highlightIcon {
+  filter: grayscale(0);
+}
+
+.highlightTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlightDescription {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* Terms Container */
+.termsContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.termsNotice {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 107, 107, 0.05));
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.noticeIcon {
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.noticeText {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.7;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Term Sections */
+.termSection {
+  margin-bottom: 32px;
+}
+
+.termTitle {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.3;
+  background: linear-gradient(135deg, #ffffff, #cccccc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.termContent {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: #e0e0e0;
+  line-height: 1.7;
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.termList {
+  margin: 20px 0 20px 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.termListItem {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  color: #e0e0e0;
+  line-height: 1.7;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 24px;
+}
+
+.listBullet {
+  position: absolute;
+  left: 0;
+  color: #ff6b6b;
+  font-size: 1.2rem;
+}
+
+.sectionDivider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  margin: 40px 0;
+}
+
+/* Disclaimer Section */
+.disclaimerSection {
+  padding-top: 40px;
+}
+
+.disclaimerCard {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 107, 107, 0.05));
+  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
+  backdrop-filter: blur(10px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.disclaimerHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.disclaimerIcon {
+  font-size: 2rem;
+  color: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
+}
+
+.disclaimerTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
+  background: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.disclaimerText {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: #e0e0e0;
+  line-height: 1.7;
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+
+.disclaimerFooter {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerText {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heroSection {
+    padding: 100px 20px 60px;
+  }
+  
+  .contentWrapper {
+    padding: 0 20px 60px;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .highlightsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .termsContainer {
+    padding: 32px;
+  }
+  
+  .disclaimerCard {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 80px 15px 50px;
+  }
+  
+  .contentWrapper {
+    padding: 0 15px 50px;
+  }
+  
+  .section {
+    padding: 50px 0;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+  
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 10px;
+  }
+  
+  .termsContainer {
+    padding: 24px;
+    margin: 0 10px;
+  }
+  
+  .termsNotice {
+    padding: 20px;
+    margin-bottom: 32px;
+  }
+  
+  .disclaimerCard {
+    padding: 24px;
+    margin: 0 10px;
+  }
+  
+  .highlightCard {
+    padding: 24px 20px;
+  }
+  
+  .highlightIcon {
+    font-size: 2.2rem;
+  }
+  
+  .termTitle {
+    font-size: 1.3rem;
+  }
+  
+  .disclaimerHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 60px 15px 40px;
+  }
+  
+  .contentWrapper {
+    padding: 0 10px 40px;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  
+  .heroDescription {
+    font-size: 0.95rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+  
+  .termsContainer {
+    padding: 20px 16px;
+    margin: 0;
+    border-radius: 12px;
+  }
+  
+  .termsNotice {
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+  }
+  
+  .noticeIcon {
+    font-size: 1.3rem;
+  }
+  
+  .noticeText {
+    font-size: 0.9rem;
+  }
+  
+  .termSection {
+    margin-bottom: 24px;
+  }
+  
+  .termTitle {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .termContent {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  
+  .termListItem {
+    font-size: 0.9rem;
+    padding-left: 20px;
+  }
+  
+  .listBullet {
+    font-size: 1rem;
+  }
+  
+  .sectionDivider {
+    margin: 32px 0;
+  }
+  
+  .disclaimerCard {
+    padding: 20px 16px;
+    border-radius: 12px;
+    margin: 0;
+  }
+  
+  .disclaimerIcon {
+    font-size: 1.8rem;
+  }
+  
+  .disclaimerTitle {
+    font-size: 1.3rem;
+  }
+  
+  .disclaimerText {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+  
+  .footerText {
+    font-size: 0.85rem;
+  }
+  
+  .highlightCard {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+  
+  .highlightIcon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  
+  .highlightTitle {
+    font-size: 1.2rem;
+  }
+  
+  .highlightDescription {
+    font-size: 0.9rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .mainContainer {
+    background: white;
+    color: black;
+  }
+  
+  .heroSection {
+    background: white;
+    padding: 60px 20px 40px;
+  }
+  
+  .heroTitle, .sectionTitle, .termTitle, .disclaimerTitle, .highlightTitle {
+    color: black;
+    -webkit-text-fill-color: black;
+    background: none;
+    background-clip: initial;
+    text-shadow: none;
+  }
+  
+  .contentWrapper {
+    padding: 0 20px 40px;
+  }
+  
+  .section {
+    padding: 40px 0;
+    break-inside: avoid;
+  }
+  
+  .highlightCard, .termsContainer, .disclaimerCard {
+    background: white;
+    border: 2px solid #000;
+    box-shadow: none;
+  }
+}

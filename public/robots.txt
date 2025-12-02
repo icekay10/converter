@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://www.unitsboard.com
+
+# Sitemaps
+Sitemap: https://www.unitsboard.com/sitemap.xml

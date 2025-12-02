@@ -1,0 +1,545 @@
+.mainContainer {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 60px 0 40px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 15px;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.title span {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 50%, #0066ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: #e0e0e0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.contentWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 25px;
+  text-align: center;
+  letter-spacing: -0.25px;
+  background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #00d4ff;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 25px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.backButton:hover {
+  background: rgba(0, 212, 255, 0.2);
+  transform: translateX(-2px);
+  border-color: rgba(0, 212, 255, 0.5);
+}
+
+.backIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.categoryCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.categoryIcon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  line-height: 1;
+  filter: grayscale(0.3);
+  transition: filter 0.3s ease;
+}
+
+.categoryCard:hover .categoryIcon {
+  filter: grayscale(0);
+}
+
+.categoryName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.unitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.unitCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.unitCard:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.unitName {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.3;
+  opacity: 0.9;
+}
+
+.calculatorCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.inputRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 25px;
+  align-items: flex-end;
+  position: relative;
+}
+
+.inputWrapper {
+  flex: 1;
+}
+
+.inputLabel {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  opacity: 0.9;
+}
+
+.inputField {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-family: inherit;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.15);
+}
+
+.inputField::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+}
+
+.resultField {
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.unitSelect {
+  width: 100%;
+  max-width: 180px;
+  padding: 14px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23e0e0e0' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+  font-family: inherit;
+}
+
+.unitSelect:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.15);
+}
+
+.swapButton {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: linear-gradient(135deg, #00d4ff, #0066ff);
+  color: #000000;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+}
+
+.swapButton:hover {
+  background: linear-gradient(135deg, #00b4e6, #0055cc);
+  transform: translateX(-50%) translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+}
+
+.swapButton:active {
+  transform: translateX(-50%) translateY(-50%) scale(0.95);
+}
+
+.swapIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.resultBadge {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 102, 255, 0.1));
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #00d4ff;
+  text-align: center;
+  margin-top: 25px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mainContainer {
+    padding: 15px;
+  }
+  
+  .header {
+    padding: 50px 0 30px;
+  }
+  
+  .categoriesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 14px;
+  }
+  
+  .unitsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+  
+  .calculatorCard {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 12px;
+  }
+  
+  .header {
+    padding: 40px 0 25px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .categoriesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+  
+  .categoryCard {
+    padding: 18px 10px;
+    border-radius: 14px;
+  }
+  
+  .categoryIcon {
+    font-size: 1.8rem;
+  }
+  
+  .categoryName {
+    font-size: 0.85rem;
+  }
+  
+  .unitsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  
+  .unitCard {
+    padding: 14px 10px;
+    border-radius: 10px;
+  }
+  
+  .unitName {
+    font-size: 0.8rem;
+  }
+  
+  .calculatorCard {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .inputRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .unitSelect {
+    max-width: 100%;
+  }
+  
+  .inputField {
+    padding: 12px 14px;
+  }
+  
+  .unitSelect {
+    padding: 12px 14px;
+  }
+  
+  .swapButton {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin: 10px auto;
+    width: 36px;
+    height: 36px;
+  }
+  
+  .swapButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .resultBadge {
+    padding: 14px 20px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    padding: 10px;
+  }
+  
+  .header {
+    padding: 30px 0 20px;
+  }
+  
+  .categoriesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .categoryCard {
+    padding: 16px 8px;
+    border-radius: 12px;
+  }
+  
+  .categoryIcon {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  
+  .categoryName {
+    font-size: 0.8rem;
+  }
+  
+  .unitsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+  }
+  
+  .unitCard {
+    padding: 12px 8px;
+    border-radius: 8px;
+  }
+  
+  .unitName {
+    font-size: 0.75rem;
+  }
+  
+  .calculatorCard {
+    padding: 16px;
+    border-radius: 14px;
+  }
+  
+  .inputField {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .unitSelect {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .swapButton {
+    width: 32px;
+    height: 32px;
+    margin: 8px auto;
+  }
+  
+  .swapIcon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .resultBadge {
+    padding: 12px 16px;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    border-radius: 10px;
+  }
+  
+  .backButton {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    margin-bottom: 20px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* Focus states for accessibility */
+.inputField:focus-visible,
+.unitSelect:focus-visible,
+.swapButton:focus-visible,
+.backButton:focus-visible {
+  outline: 2px solid #00d4ff;
+  outline-offset: 2px;
+}
+
+/* Animation for calculator card */
+.calculatorCard {
+  animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
