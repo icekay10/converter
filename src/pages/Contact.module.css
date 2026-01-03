@@ -1,0 +1,682 @@
+.mainContainer {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.heroSection {
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #000000 100%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.heroTitle span {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 50%, #0066ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.heroTitle span::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #00d4ff, #0066ff);
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 3px;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: #e0e0e0;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+/* Content Wrapper */
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+  background-color: #000000;
+}
+
+.faqSection {
+  background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionSubtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #e0e0e0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* Contact Content */
+.contactContent {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.contactFormContainer {
+  flex: 1;
+}
+
+.formCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 40px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.formCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 32px;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formLabel {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.formSelect {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23e0e0e0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 48px;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+  max-height: 300px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 16px;
+  font-family: inherit;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+/* Contact Info Container */
+.contactInfoContainer {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.supportCard {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 102, 255, 0.1));
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.supportCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 212, 255, 0.2);
+}
+
+.supportIcon {
+  font-size: 1.8rem;
+  color: #00d4ff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.supportText {
+  flex: 1;
+}
+
+.supportTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #00d4ff, #0066ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.supportDescription {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.supportSubtext {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+.contactLink {
+  color: #00d4ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  word-break: break-all;
+}
+
+.contactLink:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* FAQ Grid */
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faqCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 32px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.faqCard:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.faqQuestion {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.faqAnswer {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Connect Grid */
+.connectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.connectCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 32px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+}
+
+.connectCard:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.connectIcon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  filter: grayscale(0.3);
+  transition: filter 0.3s ease;
+}
+
+.connectCard:hover .connectIcon {
+  filter: grayscale(0);
+}
+
+.connectTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.connectDescription {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.connectLink {
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.connectLink:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heroSection {
+    padding: 100px 20px 60px;
+  }
+  
+  .contentWrapper {
+    padding: 0 20px 60px;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .contactContent {
+    gap: 30px;
+  }
+  
+  .contactInfoContainer {
+    flex: 0 0 280px;
+  }
+  
+  .faqGrid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  
+  .connectGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 80px 15px 50px;
+  }
+  
+  .contentWrapper {
+    padding: 0 15px 50px;
+  }
+  
+  .section {
+    padding: 50px 0;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+  
+  .contactContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .contactInfoContainer {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .supportCard {
+    padding: 20px;
+  }
+  
+  .formCard {
+    padding: 32px 24px;
+  }
+  
+  .faqGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 10px;
+  }
+  
+  .connectGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 10px;
+  }
+  
+  .faqCard,
+  .connectCard {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 60px 15px 40px;
+  }
+  
+  .contentWrapper {
+    padding: 0 10px 40px;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+  
+  .contactContent {
+    gap: 20px;
+  }
+  
+  .formCard {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+  
+  .formTitle {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+  }
+  
+  .formInput,
+  .formSelect,
+  .formTextarea {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+  
+  .submitButton {
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+  
+  .supportCard {
+    padding: 18px 16px;
+    border-radius: 12px;
+    gap: 12px;
+  }
+  
+  .supportIcon {
+    font-size: 1.5rem;
+  }
+  
+  .supportTitle {
+    font-size: 1rem;
+  }
+  
+  .supportDescription {
+    font-size: 0.9rem;
+  }
+  
+  .supportSubtext {
+    font-size: 0.8rem;
+  }
+  
+  .faqCard,
+  .connectCard {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+  
+  .faqQuestion {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .faqAnswer {
+    font-size: 0.9rem;
+  }
+  
+  .connectIcon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  
+  .connectTitle {
+    font-size: 1.2rem;
+  }
+  
+  .connectDescription {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+  
+  .connectLink {
+    font-size: 0.9rem;
+  }
+}
+
+/* Prevent text overflow */
+.formInput,
+.formSelect,
+.formTextarea,
+.supportDescription,
+.faqAnswer,
+.connectDescription {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Ensure buttons don't overflow on small screens */
+.submitButton,
+.connectLink {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 360px) {
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 0.9rem;
+  }
+  
+  .faqGrid,
+  .connectGrid {
+    padding: 0 5px;
+  }
+  
+  .formInput,
+  .formSelect,
+  .formTextarea {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+}
