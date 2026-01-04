@@ -93,6 +93,7 @@ const HomePage = () => {
               "name": "UnitConvert",
               "url": "https://www.unitsboard.com/",
               "description": "A free online tool that converts values between various measurement units including length, mass, volume, temperature, digital storage, speed, and more with high precision.",
+              "image": "https://www.unitsboard.com/images/og-unit-converter-home.jpg",
               "applicationCategory": "UtilitiesApplication",
               "operatingSystem": "All",
               "offers": {
@@ -159,6 +160,7 @@ const HomePage = () => {
               "@type": "Product",
               "name": "UnitConvert",
               "description": "The most accurate online unit converter with support for over 200 units across multiple categories.",
+              "image": "https://www.unitsboard.com/images/og-unit-converter-home.jpg",
               "brand": {
                 "@type": "Brand",
                 "name": "UnitsBoard"
